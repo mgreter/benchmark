@@ -156,19 +156,6 @@ module.exports = {
                     done.resolve();
                 });
             }
-        },
-        {
-            name: 'Ruby Sass',
-            defer: true,
-            fn: function (done) {
-                var command = 'sass -C --sourcemap=none ' + scssFile;
-                var dir = __dirname;
-                exec('cd ' + dir + '; bundle exec ' + command,
-                    function (error, stdout, stderr) {
-                        if ( error ) throw stderr;
-                        done.resolve();
-                    });
-            }
         }
     ]
 };
